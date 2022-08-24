@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Show Page</title>
+</head>
+<body>
+  <h1>This is the show page for <%= job.title %> </h1>
+
+    <p>The <%= job.title %> </p>
+
+    <% if(job.interview === true) { %>
+      <p> interview </p>
+    <% } else { %>
+      <p> no interview </p>
+    <% } %>
+
+    <!-- <h2>Use &lt;% %&gt; for STATEMENTS</h2>
+    <h2>Use &lt;%= %&gt; for VALUES</h2> -->
+
+    <!-- <p>A template is HTML that has places where you can insert data from you code. The process of inserting data into a template and sending back the completed html file is called <strong>rendering</strong> a template</p> -->
+
+   <!-- <p>You RENDER TEMPLATES.</p> -->
+   <a href="/jobs/<%=job.id%>/edit">
+    <button>EDIT</button>
+  </a>
+</body>
+</html>

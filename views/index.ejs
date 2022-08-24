@@ -8,6 +8,18 @@
 </head>
 <body>
   <h1>jobs index</h1>
-  
+  <ul class="jobsList">
+    <% for(let i = 0; i <jobs.length; i++){
+
+      let jobNumber = i +1
+    %>
+      <li>
+        <a href="/jobs/<%= jobs[i].id%>"><%= jobs[i].title%></a>
+        <form action="/jobs/<%= jobs[i].id%>" ?_method=DELETE" method="POST">
+        <input type="submit" value="DELETE">
+        </form>
+      </li>
+    <% } %> 
+  </ul>
 </body>
 </html>
