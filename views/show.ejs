@@ -1,9 +1,9 @@
 <%- include('./partials/header.ejs') %>
-  <h1>This is the show page for <%= job.title %> </h1>
+  <h1>Job: <%= job.title %> </h1>
 
     <p>The <%= job.title %> </p>
 
-    <% if(job.interview === true) { %>
+    <% if(job.interview === 'true') { %>
       <p> interview </p>
     <% } else { %>
       <p> no interview </p>
