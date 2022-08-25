@@ -7,7 +7,7 @@
     %>
       <li>
         <a href="/jobs/<%= jobs[i].id%>"><%= jobs[i].title%></a>
-        <form action="/jobs/<%= jobs[i].id%>" ?_method=DELETE" method="POST">
+        <form action="/jobs/<%= jobs[i].id%>?_method=DELETE" method="POST">
         <input type="submit" value="DELETE">
         </form>
       </li>
