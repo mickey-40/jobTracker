@@ -1,18 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add Job</title>
-</head>
-<body>
-  <h1>Add a job (fruit "new" page)</h1>
+<%- include('./partials/header.ejs') %>
+  <h1>Add a job (Job "new" page)</h1>
 
-    <form method="POST" action="/fruits">
+    <form method="POST" action="/jobs">
       <fieldset>
-        <label for="name">Title:</label>
-        <input id="name" type="text" name="name" placeholder="Enter new job title">
+        <label for="title">Title:</label>
+        <input id="title" type="text" name="title" placeholder="Enter new job title">
       </fieldset>
       <fieldset>
         <label for="location">Location:</label>
@@ -28,5 +20,4 @@
       </fieldset>
       <button>Add the job!</button>
     </form>
-</body>
-</html>
+    <%- include('./partials/footer.ejs') %>
