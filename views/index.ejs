@@ -10,10 +10,12 @@
           <li class="card" style="width: 18rem; margin: 5px;">
             <div class="card-body">
               <a class="card-title" href="/jobs/<%= jobs[i].id%>"><%= jobs[i].title%></a><br>
-              Location:<%=jobs[i].location%><br>
-              Date:<%=jobs[i].date%><br>
-              Got interview:<% if(jobs[i].interview=== 'true') {%> 
+              Location: <%=jobs[i].location%><br>
+              Date: <%=jobs[i].date%><br>
+              Got interview: <% if(jobs[i].interview=== true) {%> 
                               yes
+                              <% } else {%>
+                                not yet
                               <% } %>
                 <br>
               <form action="/jobs/<%= jobs[i].id%>?_method=DELETE" method="POST">

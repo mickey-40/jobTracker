@@ -1,23 +1,23 @@
 <%- include('./partials/header.ejs') %>
-  <h1>Add a job (Job "new" page)</h1>
+  <h1>Add A Job</h1>
 
     <form method="POST" action="/jobs">
-      <fieldset>
-        <label for="title">Title:</label>
-        <input id="title" type="text" name="title" placeholder="Enter new job title">
+      <fieldset class="mb-3">
+        <label class="form-label" for="title">Title:</label>
+        <input class="form-control" id="title" type="text" name="title" placeholder="Enter job title">
       </fieldset>
-      <fieldset>
-        <label for="location">Location:</label>
-        <input id="location" type="text" name="location" placeholder="Enter Location">
+      <fieldset class="mb-3">
+        <label class="form-label" for="location">Location:</label>
+        <input class="form-control" id="location" type="text" name="location" placeholder="Enter Location">
       </fieldset>
-      <fieldset>
-        <label for="date">Date:</label>
-        <input id="date" type="text" name="date" placeholder="Enter Date">
+      <fieldset class="mb-3">
+        <label class="form-label" for="date">Date:</label>
+        <input class="form-control" id="date" type="text" name="date" placeholder="Enter Date">
       </fieldset>
-      <fieldset>
-        <label for="interview">Got an interview: </label>
-        <input id="interview" type="checkbox" name="interview">
+      <fieldset class="mb-3">
+        <label class="form-label" for="interview">Got an interview: </label>
+        <input class="form-check-label" id="interview" type="checkbox" name="interview">
       </fieldset>
-      <button>Add the job!</button>
+      <button class="btn btn-primary">Add the job!</button>
     </form>
     <%- include('./partials/footer.ejs') %>

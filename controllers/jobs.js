@@ -67,15 +67,5 @@ router.put('/:id', (req, res) => {
 })
 
 
-// async function getJob(req, res, next){
-//   job = await Job.findById(req.params.id)
-//   if (job == null){
-//     let job
-//     return res.status(404).json({message: 'Cannot find job'})
-//   }
-
-//   res.job = job
-//   next()
-// }
 
 module.exports = router

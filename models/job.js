@@ -15,7 +15,7 @@ const jobSchema = new mongoose.Schema({
     default: Date.now
   },
   interview: {
-    type: String,
+    type: Boolean,
     required: true,
     default: false
   }
