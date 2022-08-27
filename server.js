@@ -8,6 +8,8 @@ const jobsController = require('./controllers/jobs.js')
 
 const methodOverride = require('method-override');
 
+const PORT = process.env.PORT || 3000;
+
 mongoose.connect(process.env.MONGODB_URI);
 const db = mongoose.connection
 
@@ -36,4 +38,4 @@ app.get('/', (req, res) => {
 });
 
 
-app.listen(3000, ()=> console.log('Server Started'))
+app.listen(PORT, ()=> console.log('Server Started'))
