@@ -22,19 +22,14 @@ db.once('open', ()=> {
 //Middleware
 app.use(express.static('public'))
 app.use(express.json())
-app.use(express.urlencoded())
+app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 
 app.use('/jobs', jobsController)
 
 //Default
 app.get('/', (req, res) => {
-	const today = new Date();
-	res.send(`
-    <h1>Hello! This is the Job Tracker app</h1>
-    <p>Thanks for using our site</p>
-    <p>${today}</p>
-  `);
+	res.render('homepage.ejs');
 });
 
 
