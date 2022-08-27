@@ -8,7 +8,7 @@ const jobsController = require('./controllers/jobs.js')
 
 const methodOverride = require('method-override');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 mongoose.connect(process.env.MONGODB_URI);
 const db = mongoose.connection
