@@ -8,7 +8,7 @@ const jobsController = require('./controllers/jobs.js')
 
 const methodOverride = require('method-override');
 
-mongoose.connect(process.env.DATABASE_URL);
+mongoose.connect(process.env.MONGODB_URI);
 const db = mongoose.connection
 
 db.on('error', (error)=> {
