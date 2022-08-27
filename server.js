@@ -5,6 +5,10 @@ const app = express()
 const mongoose = require('mongoose')
 const Job = require('./models/job.js')
 const jobsController = require('./controllers/jobs.js')
+app.use('/jobs', jobsController)
+const userController = require('./controllers/userController.js')
+app.use('/users', userController)
+
 
 const methodOverride = require('method-override');
 
@@ -25,7 +29,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 
-app.use('/jobs', jobsController)
+
 
 //Default
 app.get('/', (req, res) => {
