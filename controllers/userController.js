@@ -73,7 +73,7 @@ router.post('/signin', (req, res) => {
 router.get('/signout', (req, res) => {
   // this destroy's the session
   req.session.destroy()
-  res.redirect('/fruits')
+  res.redirect('/')
 })
 
 
