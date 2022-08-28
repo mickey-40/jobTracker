@@ -1,3 +1,4 @@
+//Load config
 require('dotenv').config()
 
 const express = require('express')
@@ -12,7 +13,7 @@ app.use('/users', userController)
 
 const methodOverride = require('method-override');
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT;
 
 mongoose.connect(process.env.MONGODB_URI);
 const db = mongoose.connection
