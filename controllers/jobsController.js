@@ -26,11 +26,11 @@ router.get('/', authRequired, async (req,res)=>{
     
 })
 // NEW
-router.get('/new', (req, res) => {
+router.get('/new',authRequired, (req, res) => {
 	res.render('new.ejs');
 });
 // SHOW
-router.get('/:id', async (req, res) => {
+router.get('/:id', authRequired, async (req, res) => {
 	
 	const job = await Job.findById(req.params.id);
 	res.render('show.ejs', {
@@ -39,7 +39,7 @@ router.get('/:id', async (req, res) => {
 
 });
 //Create
-router.post('/', async (req, res) => {
+router.post('/', authRequired, async (req, res) => {
 	if (req.body.interview === 'on') {
 		req.body.interview = true;
 	} else {
@@ -56,14 +56,14 @@ router.post('/', async (req, res) => {
 	});
 });
 //destroy
-router.delete('/:id', (req, res) => {
+router.delete('/:id', authRequired, (req, res) => {
 	Job.findByIdAndRemove(req.params.id, (err, data)=> {
 		if(err) console.log(err)
 		res.redirect('/jobs')
 	})
 })
 // EDIT
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit',authRequired, (req, res) => {
 	Job.findById(req.params.id, (err, foundJob) => {
 		res.render('edit.ejs', {job: foundJob})
 	})

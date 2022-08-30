@@ -11,17 +11,19 @@
 </head>
 <body>
   <nav class="navbar bg-dark" style="margin: 5px; padding: 5px;">
-    <div>
-        <a class="btn btn-outline-success me-2" href="/">Homepage</a>
-        |
-        <a class="btn btn-outline-success me-2" href="/jobs">List of jobs (index)</a>
-        |
-        <a class="btn btn-sm btn-outline-secondary" href="/jobs/new">Add a *new job</a>
-        |
-        <a class="btn btn-sm btn-outline-secondary" href="/users/register">Register</a>
-        |
-        <a class="btn btn-sm btn-outline-secondary" href="/users/signin">Signin</a>
-        |
-        <a class="btn btn-sm btn-outline-secondary" href="/users/signout">Signout</a>
-  </div>
-  </nav>
+    <div><a class="btn btn-outline-success me-2" href="/">Job Tracker</a></div>
+    <div class="btn btn-outline-success me-2"><a href="/jobs/new">List New Job</a></div>
+    <% if (currentUser) { %>
+    <div>Welcome <%= currentUser.username %></div>
+    <div class="btn btn-outline-success"><a class="btn btn-outline-success me-2" href="/jobs">List of jobs</a></div>
+    <div class="btn btn-outline-success">
+      <a class="btn btn-outline-success" href="/users/signout">Signout</a>
+    </div>
+    <% } else { %>
+    <div class="btn btn-outline-success"><a href="/users/register">Sign Up</a></div>
+    <div class="btn btn-outline-success"><a href="/users/signin">Log In</a></div>
+    <% } %>
+    </nav>
+  
+  
+  

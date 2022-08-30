@@ -51,4 +51,3 @@ MVP Goals
 
 Stretch Goals
 -add user auth
--Put a google map with the location of the job.

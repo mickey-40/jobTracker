@@ -9,7 +9,7 @@ router.get('/register', (req, res) => {
 
 router.post('/register', (req, res) => {
   const salt = bcrypt.genSaltSync(10)
-  console.log(req.body)
+  
   req.body.password = bcrypt.hashSync(req.body.password, salt)
 
   User.findOne({username: req.body.username}, (err, userExists) => {
@@ -19,8 +19,7 @@ router.post('/register', (req, res) => {
       
     } else {
       User.create(req.body, (err, createdUser) => {
-        // console.log(createdUser)
-        // res.send('user created')
+        
         req.session.currentUser = createdUser
         res.redirect('/jobs')
       })
@@ -34,11 +33,8 @@ router.get('/signin', (req, res) => {
 })
 
 router.post('/signin', (req, res) => {
-  // we need to get the user with that username
   User.findOne({ username: req.body.username }, (err, foundUser) => {
     if (foundUser) {
-      // if they do exist, we need compare their passwords
-      // we can compare passwords using bcrypt's compareSync function
       const validLogin = bcrypt.compareSync(req.body.password, foundUser.password)
       // compareSync returns true if they match
       // and false if they don't match
