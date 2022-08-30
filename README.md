@@ -23,15 +23,15 @@ Update/POST - /myjobs/:id - Update job listing info and redirect back to show pa
 Destroy/DELETE - /myjobs/:id - Delete a specific job listing and redirect to the index page
 
 Wireframes
-Wireframes with basic page layouts
 
-Copy and paste or drag and drop your images here.
-Screen Shot 2022-08-20 at 10 59 28 AM
-Screen Shot 2022-08-20 at 10 59 48 AM
-Screen Shot 2022-08-20 at 11 00 45 AM
-Screen Shot 2022-08-20 at 11 01 03 AM
-Screen Shot 2022-08-20 at 11 01 27 AM
-Screen Shot 2022-08-20 at 11 01 50 AM
+
+![Screen Shot 2022-08-20 at 10 59 28 AM](https://user-images.githubusercontent.com/94947933/187562847-1b77b22b-fa1a-4066-9236-0eaf02a71afb.png)
+![Screen Shot 2022-08-20 at 10 59 48 AM](https://user-images.githubusercontent.com/94947933/187562993-f2829a0b-8586-41cf-8ae4-fb6259762a13.png)
+![Screen Shot 2022-08-20 at 11 00 45 AM](https://user-images.githubusercontent.com/94947933/187563002-d44cfc34-ee53-4c95-8a12-55757c7c3e88.png)
+![Screen Shot 2022-08-20 at 11 01 03 AM](https://user-images.githubusercontent.com/94947933/187563014-0cd6dada-b41c-4508-947f-9be40d41f10f.png)
+![Screen Shot 2022-08-20 at 11 01 27 AM](https://user-images.githubusercontent.com/94947933/187563021-344dfa05-d7cc-46cf-89e4-191b040dad72.png)
+![Screen Shot 2022-08-20 at 11 01 50 AM](https://user-images.githubusercontent.com/94947933/187563032-b9803f37-5840-4aad-a23c-1f391740ec16.png)
+
 
 User Stories
 User stories detailing app functionality
