@@ -5,16 +5,31 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const session = require('express-session')
-const Job = require('./models/job.js')
-const jobsController = require('./controllers/jobs.js')
-app.use('/jobs', jobsController)
-const userController = require('./controllers/userController.js')
-app.use('/users', userController)
-
-
 const methodOverride = require('method-override');
 
-const PORT = process.env.PORT || 3000;
+const Job = require('./models/job.js')
+const User = require('./models/users.js')
+
+
+
+const PORT = process.env.PORT;
+
+const SESSION_SECRET = process.env.SESSION_SECRET
+console.log('here is the session secret')
+console.log(SESSION_SECRET)
+
+app.use(session({
+  secret: SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false
+}))
+
+app.use((req, res, next) => {
+	res.locals.currentUser = req.session.currentUser
+
+
+	next()
+})
 
 mongoose.connect(process.env.MONGODB_URI);
 const db = mongoose.connection
@@ -31,6 +46,12 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 
+const jobsController = require('./controllers/jobsController.js')
+app.use('/jobs', jobsController)
+
+
+const userController = require('./controllers/userController.js')
+app.use('/users', userController)
 
 
 //Default
