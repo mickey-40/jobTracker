@@ -1,21 +1,21 @@
 <%- include('./partials/header.ejs') %>
-  <h1>Job: <%= job.title %> </h1>
+  <div class="shadow p-3 mb-5 bg-white rounded text-center">
+    <h1>Job: <%= job.title %> </h1>
 
-    <p>The <%= job.title %> </p>
+      <p><%= job.title %> </p>
+      <p><%= job.date %> </p>
 
-    <% if(job.interview === true) { %>
-      <p> Got interview </p>
-    <% } else { %>
-      <p> no interview </p>
-    <% } %>
+      <% if(job.interview === true) { %>
+        <p> Got interview </p>
+      <% } else { %>
+        <p> no interview </p>
+      <% } %>
 
-    <!-- <h2>Use &lt;% %&gt; for STATEMENTS</h2>
-    <h2>Use &lt;%= %&gt; for VALUES</h2> -->
+      
 
-    <!-- <p>A template is HTML that has places where you can insert data from you code. The process of inserting data into a template and sending back the completed html file is called <strong>rendering</strong> a template</p> -->
-
-   <!-- <p>You RENDER TEMPLATES.</p> -->
-   <a href="/jobs/<%=job.id%>/edit">
-    <button>EDIT</button>
-  </a>
+   
+    <a href="/jobs/<%=job.id%>/edit">
+      <button>EDIT</button>
+    </a>
+  </div>
   <%- include('./partials/footer.ejs') %>
