@@ -69,7 +69,7 @@ router.get('/:id/edit',authRequired, (req, res) => {
 	})
 })
 //update 
-router.put('/:id', (req, res) => {
+router.put('/:id', authRequired, (req, res) => {
 	if(req.body.interview === 'on') {
 		req.body.interview = true
 	} else {
