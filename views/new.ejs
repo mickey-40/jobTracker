@@ -3,21 +3,29 @@
   <h1>Add A Job</h1>
 
     <form method="POST" action="/jobs">
-      <fieldset class="mb-3">
-        <label class="form-label" for="title">Title:</label>
-        <input class="form-control" id="title" type="text" name="title" placeholder="Enter job title">
+      <fieldset class="row mb-3">
+        <label class="col-sm-1 col-form-label" for="title">Title:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="title" type="text" name="title" placeholder="Enter job title">
+        </div>
       </fieldset>
-      <fieldset class="mb-3">
-        <label class="form-label" for="location">Location:</label>
-        <input class="form-control" id="location" type="text" name="location" placeholder="Enter Location">
+      <fieldset class="row mb-3">
+        <label class="col-sm-1 col-form-label" for="location">Location:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="location" type="text" name="location" placeholder="Enter Location">
+        </div>
       </fieldset>
-      <fieldset class="mb-3">
-        <label class="form-label" for="date">Date:</label>
-        <input class="form-control" id="date" type="text" name="date" placeholder="Enter Date">
+      <fieldset class="row mb-3">
+        <label class="col-sm-1 col-form-label" for="date">Date:</label>
+        <div class="col-sm-4">
+          <input class="form-control" id="date" type="text" name="date" placeholder="Enter Date">
+        </div>
       </fieldset>
-      <fieldset class="mb-3">
-        <label class="form-label" for="interview">Got an interview: </label>
-        <input class="form-check-label" id="interview" type="checkbox" name="interview">
+      <fieldset class="row mb-3">
+        <label class="col-sm-2 col-form-label" for="interview">Got an interview: </label>
+        <div class="col-sm-4">
+          <input class="form-check-label" id="interview" type="checkbox" name="interview">
+        </div>
       </fieldset>
       <button class="btn btn-primary">Add the job!</button>
     </form>
