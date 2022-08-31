@@ -13,22 +13,22 @@
   <% if (currentUser) { %>
     <h3>Welcome <%= currentUser.username %></h3>
       <nav class="navbar bg-dark" style="margin: 5px; padding: 5px;">
-        
+        <div><a class="btn btn-outline-success me-2" href="/">Job Tracker</a></div>
         <div><a class="btn btn-outline-success me-2" href="/jobs/new">Create New Job Listing</a></div>
         
         <div><a class="btn btn-outline-success me-2" href="/jobs">List of jobs</a></div>
         <div>
           <a class="btn btn-outline-success me-2" href="/users/signout">Signout</a>
         </div>
-      
+      </nav>
       <% } else { %>
-        
-          <!-- <div><a class="btn btn-dark" href="/">Job Tracker</a></div>
-          <div class="btn btn-dark"><a href="/users/register">Sign Up</a></div>
-          <div class="btn btn-dark"><a href="/users/signin">Log In</a></div> --> 
-        
+        <nav class="navbar bg-dark" style="margin: 5px; padding: 5px;">
+          <div><a class="btn btn-outline-success me-2" href="/">Job Tracker</a></div>
+          <!-- <div ><a class="btn btn-dark" href="/users/register">Sign Up</a></div>
+          <div><a class="btn btn-dark" href="/users/signin">Log In</a></div>  -->
+        </nav>
       <% } %>
-    </nav>
+    
         
   
   

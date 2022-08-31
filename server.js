@@ -15,8 +15,7 @@ const User = require('./models/users.js')
 const PORT = process.env.PORT;
 
 const SESSION_SECRET = process.env.SESSION_SECRET
-console.log('here is the session secret')
-console.log(SESSION_SECRET)
+
 
 app.use(session({
   secret: SESSION_SECRET,
