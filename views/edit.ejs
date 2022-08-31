@@ -1,15 +1,35 @@
 <%- include('./partials/header.ejs') %>
   <h1>Update Job</h1>
     <form action="/jobs/<%= job.id %>?_method=PUT" method="POST">
-        Title: <input type="text" name="title" value="<%=job.title%>"/>
-        location: <input type="text" name="location" value="<%=job.location %>"/>
-        date: <input type="text" name="date" value="<%=job.date %>"/>
-        interview: 
-        <input type="checkbox" name="interview"
+        <div class="row mb-3">
+            <label  class="col-sm-2 col-form-label">Title:</label>
+            <div class="col-sm-5">
+                <input type="text" name="title" value="<%=job.title%>"/>
+            </div>
+            
+        </div>
+        <div class="row mb-3">
+            <label  class="col-sm-2 col-form-label">Location:</label>
+            <div class="col-sm-5">
+                <input type="text" name="location" value="<%=job.location %>"/>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label  class="col-sm-2 col-form-label">Date:</label>
+            <div class="col-sm-5">
+                <input type="text" name="date" value="<%=job.date %>"/>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label  class="col-sm-2 col-form-label">Got Interview: </label>
+            <div class="col-sm-5">
+                <input type="checkbox" name="interview"
             <% if(job.interview === true) { %>
                 checked
             <% } %>
-        />
+            />
+            </div>
+        </div>
         <br>
         <input type="submit" name="" value="Submit Changes"/>
     </form>
