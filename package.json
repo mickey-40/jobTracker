@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/mickey-40/jobTracker/issues"
   },
-  "homepage": "https://github.com/mickey-40/jobTracker#readme",
+  "homepage": "https://github.com/mickey-40/jobTracker",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "body-parser": "^1.20.0",
