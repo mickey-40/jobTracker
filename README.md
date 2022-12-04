@@ -14,13 +14,13 @@ I'll be creating a jobs model which tracks the job title, location, date applied
 
 A list of routes (e.g. POST /pins/ allows users to post a picture of a pin)
 
-Index/GET- /myjobs - Show all the jobs users applied to
-New/GET - /myjobs/new - Display form to add a job to the user's list
-Create/POST - /myjobs - Create new entry and redirects to index
-Show/GET - /myjobs/:id - Show info about job
-Edit/GET - /myjobs/:id/edit - Show edit form to adjust job listing
-Update/POST - /myjobs/:id - Update job listing info and redirect back to show page
-Destroy/DELETE - /myjobs/:id - Delete a specific job listing and redirect to the index page
+Index/GET- / - Show all the jobs users applied to
+New/GET - /jobs/new - Display form to add a job to the user's list
+Create/POST - /jobs - Create new entry and redirects to index
+Show/GET - /jobs/:id - Show info about job
+Edit/GET - /jobs/:id/edit - Show edit form to adjust job listing
+Update/POST - /jobs/:id - Update job listing info and redirect back to show page
+Destroy/DELETE - /jobs/:id - Delete a specific job listing and redirect to the index page
 
 Wireframes
 
